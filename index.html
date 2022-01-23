@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike-react</title>
+    <link rel="shortcut icon" href="./images/icons/fab-pengu.png" type="image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        mainColor: '#FFF9F4',
+                        secColor: '#FA804C',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- ////////////////////////////////HEADER PART////////////////////////////////////////////////////// -->
+    <header>
+        <!-- ///////////////////navbar css/////////////////// -->
+
+        <div class="bg-mainColor">
+            <div class="navbar container mx-auto flex items-center justify-between py-4">
+                <div class="navbar__logo">
+                    <img src="./images/icons/Logo.png" alt="logo image" class="h-10 w-25">
+                </div>
+                <div class="navbar__toggle  md:hidden lg:hidden fixed top-6 right-6 bg-mainColor" aria-level="toggle-navigation">
+                    <div class="humburger h-1 w-6 bg-slate-700 my-1"></div>
+                    <div class="humburger h-1 w-6 bg-slate-700 my-1"></div>
+                    <div class="humburger h-1 w-6 bg-slate-700 my-1"></div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list bg-mainColor hidden justify-end md:flex lg:flex md:flex-row lg:flex-row flex-col 
+                    fixed right-0 top-12 lg:top-6 md:top-6 md:right-4 lg:right-4">
+                        <li class="nav__item ml-4 p-1 text-right">
+                            <a href="#home" class="nav_link p-1 rounded-sm font-bold text-slate-700 hover:text-white hover:bg-secColor">Home</a>
+                        </li>
+                        <li class="nav__item ml-4 p-1 text-right">
+                            <a href="#product" class="nav_link p-1 rounded-sm font-bold text-slate-700 hover:text-white hover:bg-secColor">product</a>
+                        </li>
+                        <li class="nav__item ml-4 p-1 text-right">
+                            <a href="#" class="nav_link p-1 rounded-sm font-bold text-slate-700 hover:text-white hover:bg-secColor">About Us</a>
+                        </li>
+                        <li class="nav__item ml-4 p-1 text-right">
+                            <a href="#" class="nav_link p-1 rounded-sm font-bold text-slate-700 hover:text-white hover:bg-secColor">Contact Us</a>
+                        </li>
+
+                    </ul>
+                    <script>
+                        const btn = document.querySelector('.navbar__toggle');
+                        const menu = document.querySelector('.nav__list')
+                        btn.addEventListener('click', () => {
+                            menu.classList.toggle('hidden')
+                        })
+                    </script>
+
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+    <!-- ////////////////////////////////MAIN PART////////////////////////////////////////////////////// -->
+    <main>
+        <!--///////////////////////// INTRO GOES HERE/////////////////// -->
+        <section id="home" class="intro">
+            <div class="container">
+                <div class="intro__banner lg:flex md:flex items-center justify-between p-4 gap-24">
+                    <div class="intro__image  px-5 mx-auto w-4/6">
+                        <img src="./images/Group 33092.png" alt="Intro image">
+                    </div>
+                    <div class="intro__details p-6">
+                        <h2 class="intro__title lg:text-5xl md:text-4xl text-3xl font-bold uppercase p-4">
+                            <span class="text-secColor">Nike React</span>
+                            <br>
+                            <span class="text-slate-700">Infinity run-2</span>
+                        </h2>
+                        <p class="intro__subtitle text-xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <button class="bg-blue-700 lg:px-6 md:px-6 lg:py-3 md:py-3 px-4 py-2 rounded-md text-white mt-4 uppercase">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- /////////////////PRODUCT GOES HERE//////////////////////////////////////// -->
+        <section id="product" class="product my-12">
+            <div class="container mx-auto">
+                <!-- //////////////CASUAL SHOES///////////////////// -->
+                <div class="casual-shoes p-6">
+                    <h2 class="font-bold lg:text-4xl md:text-3xl text-2xl text-slate-700 uppercase  p-4">Casual shoes</h2>
+                    <div class="casual-shoes__items grid lg:grid-cols-3 md:grid-cols-2">
+                        <!--///////// item-1////// -->
+                        <div class="casual-shoes__item p-4">
+                            <div class="casual-shoes__item--image shadow-lg bg-indigo-50">
+                                <img src="./images/pngegg 1.png" alt="item-1 image casual shoe" class="h-80">
+                            </div>
+                            <h3 class="casual-shoes__item--title lg:text-4xl md:text-3xl text-2xl font-bold text-slate-700 py-2">
+                                Nike sport running shoe men
+                            </h3>
+                            <p class="casual-shoes__item--subtitle lg:text-2xl md:text-xl py-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, beatae.
+                            </p>
+                            <div class="casual-shoes__item--price flex justify-between py-2">
+                                <h3 class="font-bold text-secColor lg:text-4xl md:text-3xl text-2xl">$899</h3>
+                                <button class="bg-blue-700 lg:px-6 md:px-6 lg:py-3 md:py-3 px-4 py-2
+                                 rounded-md text-white uppercase">Buy Now</button>
+                            </div>
+                        </div>
+                        <!--///////// item-2////// -->
+                        <div class="casual-shoes__item p-4">
+                            <div class="casual-shoes__item--image shadow-lg bg-indigo-50">
+                                <img src="./images/image 5.png" alt="item-2 image casual shoe" class="h-80">
+                            </div>
+                            <h3 class="casual-shoes__item--title lg:text-4xl md:text-3xl text-2xl font-bold text-slate-700 py-2">
+                                Sneakers walking shoe men
+                            </h3>
+                            <p class="casual-shoes__item--subtitle lg:text-2xl md:text-xl py-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, beatae.
+                            </p>
+                            <div class="casual-shoes__item--price flex justify-between items-center py-2">
+                                <h3 class="font-bold text-secColor lg:text-4xl md:text-3xl text-2xl">$499</h3>
+                                <button class="bg-blue-700 lg:px-6 md:px-6 lg:py-3 md:py-3 px-4 py-2
+                                 rounded-md text-white uppercase">Buy Now</button>
+                            </div>
+                        </div>
+                        <!--///////// item-3////// -->
+                        <div class="casual-shoes__item p-4">
+                            <div class="casual-shoes__item--image shadow-lg bg-indigo-50">
+                                <img src="./images/Daco_1703273 1.png" alt="item-3 image casual shoe" class="h-80">
+                            </div>
+                            <h3 class="casual-shoes__item--title lg:text-4xl md:text-3xl text-2xl font-bold text-slate-700 py-2">
+                                Skate walking Shoe men
+                            </h3>
+                            <p class="casual-shoes__item--subtitle lg:text-2xl md:text-xl py-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, beatae.
+                            </p>
+                            <div class="casual-shoes__item--price flex justify-between items-center py-2">
+                                <h3 class="font-bold text-secColor lg:text-4xl md:text-3xl text-2xl">$699</h3>
+                                <button class="bg-blue-700 lg:px-6 md:px-6 lg:py-3 md:py-3 px-4 py-2
+                                 rounded-md text-white uppercase">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ////////////////FORMAL SHOES -->
+                <div class="formal-shoes p-6">
+                    <h2 class="font-bold lg:text-4xl md:text-3xl text-2xl text-slate-700 uppercase  p-4">formal shoes</h2>
+                    <div class="formal-shoes__items grid lg:grid-cols-3 md:grid-cols-2">
+                        <!--///////// item-1////// -->
+                        <div class="formal-shoes__item p-4">
+                            <div class="formal-shoes__item--image shadow-lg bg-white">
+                                <img src="./images/Mask Group.png" alt="item-1 image formal shoe" class="h-80">
+                            </div>
+                            <h3 class="formal-shoes__item--title lg:text-4xl md:text-3xl text-2xl font-bold text-slate-700 py-2">
+                                High-Cut Leather shoe
+                            </h3>
+                            <p class="formal-shoes__item--subtitle lg:text-2xl md:text-xl py-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, beatae.
+                            </p>
+                            <div class="formal-shoes__item--price flex justify-between py-2">
+                                <h3 class="font-bold text-secColor lg:text-4xl md:text-3xl text-2xl">$899</h3>
+                                <button class="bg-blue-700 lg:px-6 md:px-6 lg:py-3 md:py-3 px-4 py-2
+                                 rounded-md text-white uppercase">Buy Now</button>
+                            </div>
+                        </div>
+                        <!--///////// item-2////// -->
+                        <div class="formal-shoes__item p-4">
+                            <div class="formal-shoes__item--image shadow-lg bg-white">
+                                <img src="./images/Rectangle 38.png" alt="item-2 image formal shoe" class="h-80">
+                            </div>
+                            <h3 class="formal-shoes__item--title lg:text-4xl md:text-3xl text-2xl font-bold text-slate-700 py-2">
+                                Slip-On Formal Shoe men
+                            </h3>
+                            <p class="formal-shoes__item--subtitle lg:text-2xl md:text-xl py-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, beatae.
+                            </p>
+                            <div class="formal-shoes__item--price flex justify-between items-center py-2">
+                                <h3 class="font-bold text-secColor lg:text-4xl md:text-3xl text-2xl">$499</h3>
+                                <button class="bg-blue-700 lg:px-6 md:px-6 lg:py-3 md:py-3 px-4 py-2
+                                 rounded-md text-white uppercase">Buy Now</button>
+                            </div>
+                        </div>
+                        <!--///////// item-3////// -->
+                        <div class="formal-shoes__item p-4">
+                            <div class="formal-shoes__item--image shadow-lg bg-white">
+                                <img src="./images/Rectangle 39.png" alt="item-3 image formal shoe" class="h-80">
+                            </div>
+                            <h3 class="formal-shoes__item--title lg:text-4xl md:text-3xl text-2xl font-bold text-slate-700 py-2">
+                                Slip-On Formal Shoe men
+                            </h3>
+                            <p class="formal-shoes__item--subtitle lg:text-2xl md:text-xl py-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, beatae.
+                            </p>
+                            <div class="formal-shoes__item--price flex justify-between items-center py-2">
+                                <h3 class="font-bold text-secColor lg:text-4xl md:text-3xl text-2xl">$699</h3>
+                                <button class="bg-blue-700 lg:px-6 md:px-6 lg:py-3 md:py-3 px-4 py-2
+                                 rounded-md text-white uppercase">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /////////////////BENEFIT SECTION GOES HERE/////////////////////// -->
+        <section id="benefit" class="my-10">
+            <div class="container mx-auto">
+                <div class="benefit lg:flex md:flex items-center p-4">
+                    <div class="benefit-all">
+                        <!-- item-1 -->
+                        <div class="benfit-item bg-slate-200 my-4 lg:flex md:flex p-2.5 rounded-lg items-center">
+                            <div class="benefit-icon flex justify-center">
+                                <img class="w-40" src="./images/icons/image 12.png" alt="house">
+                            </div>
+                            <div class="benefit-intro p-2.5 text-center lg:text-left md:text-left">
+                                <h3 class="text-2xl font-semibold capitalize">Find The Perfect Fit</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, quaerat!</p>
+                            </div>
+                        </div>
+                        <!-- item-2 -->
+                        <div class="benfit-item bg-slate-200 my-4lg:flex md:flex p-2.5 rounded-lg items-center">
+                            <div class="benefit-icon flex justify-center">
+                                <img class="w-40" src="./images/icons/image 13.png" alt="box">
+                            </div>
+                            <div class="benefit-intro p-2.5 text-center lg:text-left md:text-left">
+                                <h3 class="text-2xl font-semibold capitalize">Free Exchanges</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, quaerat!</p>
+                            </div>
+                        </div>
+                        <!-- item-3 -->
+                        <div class="benfit-item bg-slate-200 my-4 lg:flex md:flex p-2.5 rounded-lg items-center">
+                            <div class="benefit-icon flex justify-center">
+                                <img class="w-40" src="./images/icons/image 14.png" alt="Microphone">
+                            </div>
+                            <div class="benefit-intro p-2.5 text-center lg:text-left md:text-left">
+                                <h3 class="text-2xl font-semibold capitalize">Contact Our Seller</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, quaerat!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-image p-6 lg:w-full md:w-full">
+                        <img src="./images/icons/XMLID 1.png" alt="shopping-home">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- ////////////////////////////////FOOTER PART////////////////////////////////////////////////////// -->
+    <footer>
+
+    </footer>
+
+
+</body>
+
+</html>
